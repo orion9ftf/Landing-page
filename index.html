@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--- Falta la etiqueta de autor del sitio --->
+    <meta name="author" content="Nombre del autor">
+
     <title>Landing Page</title>
-    <link rel="stylesheet" href="/css/style.css">
+
+    <!--- El archivo style.css debe estar dentro de la carpeta css para mantener una estructura organizada del proyecto --->
+    <!--- Evitar rutas absolutas como /css/style.css ya que pueden fallar en entornos de producción. Usar rutas relativas como ./css/style.css --->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
@@ -12,10 +19,15 @@
     <div class="container">
         <h1>¡Bienvenido a nuestra página!</h1>
         <p>Sitio web de muestra para una empresa ficticia</p>
-        <a href="#features" class="btn">Ver características</a>
     </div>
+
+    <!--- Se recomienda colocar el botón dentro de un elemento nav o section si se trata de navegación para mejorar la semántica --->
+    <!--- En la etiqueta <a> se deben utilizar los atributos rel="noopener noreferrer nofollow" si el enlace abre en una nueva pestaña con target="_blank" --->
+    <!--- Como no se usa target="_blank", no es obligatorio usar rel, aunque es buena práctica si se agregara luego --->
+    <a href="./features.html" class="btn">Ver características</a>
 </header>
 
+<!--- El atributo id es útil no solo para JavaScript, sino también para navegación interna o estilos específicos. Su uso aquí es correcto --->
 <section id="features">
     <div class="container">
         <h2>Características principales</h2>
@@ -34,6 +46,7 @@
     </div>
 </section>
 
+<!--- El uso de id también permite enlazar desde un menú con anclas internas como <a href="#testimonials"> --->
 <section id="testimonials">
     <div class="container">
         <h2>Testimonios</h2>
@@ -51,10 +64,19 @@
 <section id="contact">
     <div class="container">
         <h2>Contacto</h2>
+
+        <!--- Usar <label> con 'for' asociado a cada input mejora la accesibilidad del formulario --->
+        <!--- El atributo action="#" no hace nada útil. Es mejor definir una ruta o eliminarlo si no se usará aún --->
         <form action="#" method="post">
-            <input type="text" name="name" placeholder="Nombre" required>
-            <input type="email" name="email" placeholder="Correo electrónico" required>
-            <textarea name="message" placeholder="Mensaje" required></textarea>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Nombre" required>
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" placeholder="Mensaje" required></textarea>
+
             <button type="submit" class="btn">Enviar mensaje</button>
         </form>
     </div>
