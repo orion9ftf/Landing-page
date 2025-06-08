@@ -3,90 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--- Falta la etiqueta de autor del sitio --->
-    <meta name="author" content="Nombre del autor">
-
-    <title>Landing Page</title>
-
-    <!--- El archivo style.css debe estar dentro de la carpeta css para mantener una estructura organizada del proyecto --->
-    <!--- Evitar rutas absolutas como /css/style.css ya que pueden fallar en entornos de producción. Usar rutas relativas como ./css/style.css --->
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Downhill Riders - Elite Mountain Bikers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="https://portal.inacap.cl/" target="_blank" rel="noopener noreferrer">Inicio</a></li>
+          <li><a href="https://portal.inacap.cl/" target="_blank" rel="noopener noreferrer">Nosotros</a></li>
+          <li><a href="https://portal.inacap.cl/" target="_blank" rel="noopener noreferrer">Servicios</a></li>
+          <li><a href="https://www.linkedin.com/in/eva-matus-240063128/" target="_blank" rel="noopener noreferrer">Contacto</a></li>
+        </ul>
+      </nav>    
+    </header>
 
-<header>
-    <div class="container">
-        <h1>¡Bienvenido a nuestra página!</h1>
-        <p>Sitio web de muestra para una empresa ficticia</p>
-    </div>
+    <!-- Riders Section -->
+    <section id="riders" class="riders-section">
+        <div class="container">
+            <h2 class="section-title">NUESTROS RIDERS</h2>
+            <div class="riders-grid">
+                <!-- Male Riders -->
+                <div class="rider-card">
+                    <div class="card-image">
+                        <img src="/img/aaron.jpeg" alt="Aaron Gwin">
+                        <div class="card-overlay">
+                            <span class="rider-category">ELITE MASCULINO</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="rider-name">Aaron Gwin</h3>
+                        <p class="rider-country">🇺🇸 Estados Unidos</p>
+                        <div class="rider-stats">
+                            <div class="stat">
+                                <span class="stat-number">20</span>
+                                <span class="stat-label">Victorias UCI</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">4</span>
+                                <span class="stat-label">Copas del Mundo</span>
+                            </div>
+                        </div>
+                        <p class="rider-description">Leyenda del downhill con un estilo agresivo y técnica impecable.</p>
+                    </div>
+                </div>
 
-    <!--- Se recomienda colocar el botón dentro de un elemento nav o section si se trata de navegación para mejorar la semántica --->
-    <!--- En la etiqueta <a> se deben utilizar los atributos rel="noopener noreferrer nofollow" si el enlace abre en una nueva pestaña con target="_blank" --->
-    <!--- Como no se usa target="_blank", no es obligatorio usar rel, aunque es buena práctica si se agregara luego --->
-    <a href="./features.html" class="btn">Ver características</a>
-</header>
-
-<!--- El atributo id es útil no solo para JavaScript, sino también para navegación interna o estilos específicos. Su uso aquí es correcto --->
-<section id="features">
-    <div class="container">
-        <h2>Características principales</h2>
-        <div class="feature">
-            <h3>Facilidad de uso</h3>
-            <p>Nuestra plataforma es fácil de usar para cualquier persona, sin importar su experiencia.</p>
+                
+            </div>
         </div>
-        <div class="feature">
-            <h3>Diseño moderno</h3>
-            <p>Nuestro diseño está actualizado con las últimas tendencias para brindar la mejor experiencia al usuario.</p>
-        </div>
-        <div class="feature">
-            <h3>Soporte 24/7</h3>
-            <p>Ofrecemos soporte técnico las 24 horas del día, los 7 días de la semana, para ayudarte en cualquier momento.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!--- El uso de id también permite enlazar desde un menú con anclas internas como <a href="#testimonials"> --->
-<section id="testimonials">
-    <div class="container">
-        <h2>Testimonios</h2>
-        <div class="testimonial">
-            <p>"¡Increíble servicio! ¡Gracias por hacer mi vida más fácil!"</p>
-            <cite>- Cliente feliz</cite>
-        </div>
-        <div class="testimonial">
-            <p>"Nunca pensé que encontraría una solución tan genial. ¡Recomendado al 100%!"</p>
-            <cite>- Otro cliente satisfecho</cite>
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="container">
-        <h2>Contacto</h2>
-
-        <!--- Usar <label> con 'for' asociado a cada input mejora la accesibilidad del formulario --->
-        <!--- El atributo action="#" no hace nada útil. Es mejor definir una ruta o eliminarlo si no se usará aún --->
-        <form action="#" method="post">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" placeholder="Nombre" required>
-
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
-
-            <label for="message">Mensaje</label>
-            <textarea id="message" name="message" placeholder="Mensaje" required></textarea>
-
-            <button type="submit" class="btn">Enviar mensaje</button>
-        </form>
-    </div>
-</section>
-
-<footer>
-    <div class="container">
-        <p>&copy; 2025 Compañía XYZ. Todos los derechos reservados.</p>
-    </div>
-</footer>
+    <footer>
+      &copy; 2025 CV - Todos los derechos reservados
+    </footer>
 
 </body>
 </html>
+
