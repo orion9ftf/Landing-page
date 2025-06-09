@@ -42,3 +42,5 @@ Asegúrate de que el diseño se vea bien en móviles (usa viewport, media querie
 Seguridad:
 
 Si usas target="_blank", siempre añade rel="noopener noreferrer" para evitar ataques de tipo reverse tabnabbing.
+
+
